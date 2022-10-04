@@ -1,0 +1,9 @@
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\bin\Debug\Zadanie_4_dz.exe.config
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\bin\Debug\Zadanie_4_dz.exe
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\bin\Debug\Zadanie_4_dz.pdb
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\obj\Debug\Zadanie_4_dz.Form1.resources
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\obj\Debug\Zadanie_4_dz.Properties.Resources.resources
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\obj\Debug\Zadanie_2.csproj.GenerateResource.cache
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\obj\Debug\Zadanie_2.csproj.CoreCompileInputs.cache
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\obj\Debug\Zadanie_4_dz.exe
+D:\С# form\git_dz-1\DZ_lab_5\Zadanie_2\obj\Debug\Zadanie_4_dz.pdb
