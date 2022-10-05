@@ -10,18 +10,24 @@ namespace Zadanie_3{
             InitializeComponent();
             if (File.Exists(pyth)){
                 string[] file = File.ReadAllLines(pyth);
-                for(int i = 0; i < file.Length; i++){
-                    if (!String.IsNullOrWhiteSpace(file[i])){
-                        string[] stroka = file[i].Split('&');
-                        listBox_worker.Items.Add(stroka[0]);
-                    }
-                }
+                for(int i = 0; i < file.Length; i++)
+                    if (!String.IsNullOrWhiteSpace(file[i]))
+                    {
+                        listBox_worker.Items.Add(file[i]);
+                        string[] stroka = file[i].Split(',');
+                        if (!comboBox_post.Items.Contains(stroka[2]))
+                            comboBox_post.Items.Add(stroka[2]);
+                        if (!comboBox_city.Items.Contains(stroka[3]))
+                            comboBox_city.Items.Add(stroka[3]);
+                        if (!comboBox_street.Items.Contains(stroka[4]))
+                            comboBox_street.Items.Add(stroka[4]);
+                    }    
             }
         }
 
         private void Add_comboBox(ComboBox b)
         {
-            if (b.Text != "" && b.SelectedIndex == -1)
+            if (b.Text != "" && !b.Items.Contains(b.Text))
                 b.Items.Add(b.Text);
         }
 
@@ -57,14 +63,14 @@ namespace Zadanie_3{
             else if (!IsNamber(textBox_House))
                 ErrorBox("№ дома");
             else{
-                listBox_worker.Items.Add(textBox_surname.Text);
                 var file = new StreamWriter(pyth, true);
-                string stroka = textBox_surname.Text + "&" +
-                    textBox_salary.Text + "&" + comboBox_post.Text + "&" +
-                    comboBox_city.Text + "&" + comboBox_street.Text + "&"
+                string stroka = textBox_surname.Text + "," +
+                    textBox_salary.Text + "," + comboBox_post.Text + "," +
+                    comboBox_city.Text + "," + comboBox_street.Text + ","
                     + textBox_House.Text;
                 file.WriteLine(stroka);
                 file.Close();
+                listBox_worker.Items.Add(stroka);
                 foreach (var b in Controls.OfType<ComboBox>())
                     b.Text = "";
                 foreach (var b in Controls.OfType<TextBox>())
